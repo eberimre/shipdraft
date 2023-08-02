@@ -1,12 +1,12 @@
 package hu.eberimre.shipdraft.controller;
 
 import hu.eberimre.shipdraft.DTO.PersonData;
+import hu.eberimre.shipdraft.DTO.RegistrationDataCommand;
 import hu.eberimre.shipdraft.service.PersonService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +22,12 @@ public class PersonController {
     @GetMapping
     public ResponseEntity <List<PersonData>> getAllPeople() {
         return new ResponseEntity<>(personService.getAllPeople(), HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<Void> addPerson(@RequestBody RegistrationDataCommand personData) {
+        personService.addPerson(personData);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
 

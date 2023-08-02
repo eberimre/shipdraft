@@ -1,0 +1,33 @@
+    <div class="card bg-body-tertiary mb-5">
+    <div class="card-body text-center d-flex flex-column">
+      <h3 class="text-center mb-3">List of People</h3>
+      <hr>
+      <table class="table mb-5">
+        <thead>
+        <tr class="table-success">
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Year Of Birth</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Contact Data</th>
+          <th scope="col">is Participate</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  *ngFor="let person of personData ">
+          <td>{{person.id}}</td>
+          <td>{{person.name}}</td>
+          <td>{{person.yearOfBirth}}</td>
+          <td>{{person.gender}}</td>
+          <td><Button class="btn btn-success">Contact data</Button></td>
+          <td>{{person.isParticipate}}</td>
+          <td><Button class="btn btn-primary">Edit data</Button></td>
+          <td><Button class="btn btn-danger">Delete data</Button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

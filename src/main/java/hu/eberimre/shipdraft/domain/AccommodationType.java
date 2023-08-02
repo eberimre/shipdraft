@@ -1,6 +1,6 @@
 package hu.eberimre.shipdraft.domain;
 
-public enum AccomodationType {
+public enum AccommodationType {
 
     TENT ("tent", 1000),
     WOODHOUSE ("woodhouse", 2000),
@@ -11,7 +11,7 @@ public enum AccomodationType {
     private final String name;
     private final int price;
 
-    AccomodationType(String name, int price) {
+    AccommodationType(String name, int price) {
         this.name = name;
         this.price = price;
     }

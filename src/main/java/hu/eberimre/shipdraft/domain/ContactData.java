@@ -16,8 +16,8 @@ public class ContactData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    Integer id;
-    String email;
-    String phone;
+    private Integer id;
+    private String email;
+    private String phone;
 
 }

@@ -15,23 +15,26 @@ public class Participant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    Integer id;
+    private Integer id;
 
     @OneToOne
     @JoinColumn(name = "person_id")
-    Person person;
+    private Person person;
 
     @ManyToOne
     @JoinColumn(name = "attendance_id")
-    Attendance attendance;
+    private Attendance attendance;
 
     @Enumerated(EnumType.STRING)
-    BoatType boatType;
+    private BoatType boatType;
 
     @Enumerated(EnumType.STRING)
-    PositionType position;
+    private PositionType position;
 
-    String questions;
-    String remarks;
+    @Enumerated(EnumType.STRING)
+    private AccommodationType accommodationType;
+
+    private String questions;
+    private String remarks;
 
 }

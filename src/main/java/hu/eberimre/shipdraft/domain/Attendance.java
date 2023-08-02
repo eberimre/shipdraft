@@ -18,8 +18,8 @@ public class Attendance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    Integer id;
-    LocalDate arrivalDate;
-    LocalTime arrivalTime;
-    LocalDate leavingDate;
+    private Integer id;
+    private LocalDate arrivalDate;
+    private LocalTime arrivalTime;
+    private LocalDate leavingDate;
 }

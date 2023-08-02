@@ -12,8 +12,9 @@ public class PersonData {
     private Integer id;
     private String name;
     private int yearOfBirth;
-    private String sex;
-    private ContactData contactdata;
+    private String gender;
+    private ContactData contactData;
+    private Boolean isParticipate;
 
     public PersonData() {
     }
@@ -22,8 +23,9 @@ public class PersonData {
         this.id = person.getId();
         this.name = person.getName();
         this.yearOfBirth = person.getYearOfBirth();
-        this.sex = person.getSex();
-        this.contactdata = person.getContactdata();
+        this.gender = person.getGender();
+        this.contactData = person.getContactData();
+        this.isParticipate = person.getIsParticipate();
     }
 
 }
