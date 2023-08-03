@@ -1,5 +1,6 @@
 package hu.eberimre.shipdraft.domain;
 
+import hu.eberimre.shipdraft.DTO.RegistrationDataCommand;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -36,5 +37,9 @@ public class Participant {
 
     private String questions;
     private String remarks;
+
+    public Participant(Person person) {
+        this.person = person;
+    }
 
 }

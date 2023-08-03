@@ -16,15 +16,15 @@
         </tr>
         </thead>
         <tbody>
-        <tr  *ngFor="let person of personData ">
+        <tr  *ngFor="let person of peopleData ">
           <td>{{person.id}}</td>
           <td>{{person.name}}</td>
           <td>{{person.yearOfBirth}}</td>
           <td>{{person.gender}}</td>
           <td><Button class="btn btn-success">Contact data</Button></td>
           <td>{{person.isParticipate}}</td>
-          <td><Button class="btn btn-primary">Edit data</Button></td>
-          <td><Button class="btn btn-danger">Delete data</Button></td>
+          <td><Button class="btn btn-primary" (click)="switchToEditParticipantData(person.id)">Edit data</Button></td>
+          <td><Button class="btn btn-danger" (click)="deletePerson(person.id)">Delete Person</Button></td>
         </tr>
         </tbody>
       </table>

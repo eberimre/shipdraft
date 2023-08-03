@@ -20,4 +20,11 @@ export class PersonService {
         return this.Http.post(BASE_URL, person);
     }
 
+  deletePerson(id: number): Observable<any> {
+    return this.Http.delete(BASE_URL+ '/' + id);
+  }
+
+  editPersonData(id: number):Observable<PersonDataModel> {
+    return this.Http.get<PersonDataModel>(BASE_URL+ '/' + id);
+  }
 }

@@ -30,5 +30,16 @@ public class PersonController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity <PersonData> getPerson(@PathVariable Integer id) {
+        return new ResponseEntity<>(personService.getPerson(id), HttpStatus.OK);
+    }
+
+    @DeleteMapping ("/{id}")
+    public ResponseEntity<Void> deletePerson(@PathVariable Integer id) {
+        personService.deletePerson(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 
 }
