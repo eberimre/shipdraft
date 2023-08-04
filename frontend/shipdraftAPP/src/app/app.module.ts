@@ -10,6 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import { ParticipantListComponent } from './components/participant-list/participant-list.component';
 import { ParticipantDataComponent } from './components/participant-data/participant-data.component';
+import { ContactDataFormComponent } from './components/contact-data-form/contact-data-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ParticipantDataComponent } from './components/participant-data/particip
     PeopleListComponent,
     AddPersonComponent,
     ParticipantListComponent,
-    ParticipantDataComponent
+    ParticipantDataComponent,
+    ContactDataFormComponent
   ],
   imports: [
     BrowserModule,
